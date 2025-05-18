@@ -6,6 +6,7 @@ const TestimonialSection = lazy(() =>
   import("@/components/TestimonialSection")
 );
 const WhatWeDoSection = lazy(() => import("@/components/WhatWeDoSection"));
+const FooterSection = lazy(() => import("@/components/Footer"));
 
 const Home = ({ onSectionRefs }) => {
   const heroRef = useRef(null);
@@ -43,6 +44,7 @@ const Home = ({ onSectionRefs }) => {
         <div ref={testimonialsRef} data-section='testimonials'>
           <TestimonialSection />
         </div>
+        <FooterSection />
       </Suspense>
     </main>
   );
