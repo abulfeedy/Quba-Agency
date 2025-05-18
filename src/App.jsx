@@ -1,10 +1,10 @@
-import { useCallback, useState } from "react";
+import { lazy, Suspense, useCallback, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Home from "@/pages/Home";
-import FooterSection from "@/components/Footer";
+const FooterSection = lazy(() => import("@/components/Footer"));
 
 const App = () => {
   const [sectionRefs, setSectionRefs] = useState({});
@@ -29,7 +29,9 @@ const App = () => {
           />
         </Routes>
       </motion.main>
-      <FooterSection />
+      <Suspense>
+        <FooterSection />
+      </Suspense>
     </div>
   );
 };
