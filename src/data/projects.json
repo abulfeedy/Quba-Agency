@@ -1,0 +1,178 @@
+{
+  "recent": [
+    {
+      "title": "PepeMoon",
+      "description": "A high-octane memecoin platform with raw degen energy, featuring a fair launch, locked liquidity, and real-time charts for moon-chasers.",
+      "tag": "Meme",
+      "image": "/images/pepemoon.webp",
+      "techStack": ["React", "Vite", "Tailwind"],
+      "link": "https://pepemoon-iota.vercel.app/"
+    },
+    {
+      "title": "Quba Launch",
+      "description": "A decentralized launchpad for Web3 dreamers, enabling token creation, presale investments, and memecoin tracking with a sleek flair.",
+      "tag": "Launchpad",
+      "image": "/images/qubalaunch.webp",
+      "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
+      "link": "https://qubalaunch.vercel.app/"
+    },
+    {
+      "title": "MetaVerse Fest 2025",
+      "description": "A revolutionary Web3 event platform with NFT tickets, hackathons, and immersive metaverse vibes, built for the future of festivals.",
+      "tag": "Event",
+      "image": "/images/metafest.webp",
+      "techStack": ["React", "Framer Motion", "Web3.js", "Wagmi"],
+      "link": "https://metafest.vercel.app/"
+    }
+  ],
+  "website": [
+    {
+      "title": "Blockchain Explorer Lite",
+      "description": "A vibrant Web3 tool for users to track wallet transactions across BTC, BNB, SOL, ETH, and USDT, with a bold traditional vibe.",
+      "tag": "Web3",
+      "image": "/images/blockexplorer.png",
+      "techStack": ["React", "Vite", "Tailwind", "Web3.js", "Api"],
+      "link": "https://blockchain-explorer-lite.example.com"
+    },
+    {
+      "title": "Quba Launch",
+      "description": "A decentralized launchpad for Web3 dreamers, enabling token creation, presale investments, and memecoin tracking with a sleek flair.",
+      "tag": "Launchpad",
+      "image": "/images/qubalaunch.webp",
+      "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
+      "link": "https://qubalaunch.vercel.app/"
+    },
+    {
+      "title": "AstraNet",
+      "description": "A Web3 cloud computing platform powered by ASTRA, offering decentralized GPU power, storage, and rendering for AI and creative innovators.",
+      "tag": "Utility",
+      "image": "/images/astra.png",
+      "techStack": ["React", "Vite", "Tailwind", "Wagmi"],
+      "link": "https://astranet-pi.vercel.app/"
+    },
+    {
+      "title": "MetaVerse Fest 2025",
+      "description": "A revolutionary Web3 event platform with NFT tickets, hackathons, and immersive metaverse vibes, built for the future of festivals.",
+      "tag": "Event",
+      "image": "/images/metafest.webp",
+      "techStack": ["React", "Framer Motion", "Web3.js", "Wagmi"],
+      "link": "https://metafest.vercel.app/"
+    },
+    {
+      "title": "PepeMoon",
+      "description": "A high-octane memecoin platform with raw degen energy, featuring a fair launch, locked liquidity, and real-time charts for moon-chasers.",
+      "tag": "Meme",
+      "image": "/images/pepemoon.webp",
+      "techStack": ["React", "Vite", "Tailwind"],
+      "link": "https://pepemoon-iota.vercel.app/"
+    },
+    {
+      "title": "Nostalgic Solana ($NOST)",
+      "description": "A throwback memecoin platform reliving Solana’s 2021 glory days, with 5% SOL rewards every 5 minutes and a nostalgic vaporwave aesthetic.",
+      "tag": "Meme",
+      "image": "/images/nost.webp",
+      "techStack": ["HTML", "CSS", "Vanilla JS"],
+      "link": "https://nostcoin.vercel.app/"
+    }
+  ],
+  "bots": [],
+
+  "meme": [
+    {
+      "title": "Angry Spud",
+      "tag": "NFT",
+      "description": "Meet Angry Spud, the feistiest tuber in the blockchain patch! This spud’s got a chip on its shoulder and a dream of dominating the DeFi farm. Will you join its starchy rebellion?",
+      "image": "/images/memes/angry_potato.jpg",
+      "techStack": ["GIMP", "Canva"],
+      "link": "https://example.com/angry-spud"
+    },
+    {
+      "title": "Dr. Shrimp",
+      "tag": "Meme Token",
+      "description": "Dr. Shrimp is the ocean’s smartest crustacean, prescribing Web3 wisdom with a pinch of humor. This shrimpy doc is ready to heal FOMO syndrome, dive into its clinic!",
+      "image": "/images/memes/dr-shrimp.jpg",
+      "techStack": ["GIMP"],
+      "link": "https://example.com/dr-shrimp"
+    },
+    {
+      "title": "DJ Chubby Frog",
+      "tag": "NFT",
+      "description": "DJ Chubby Frog spins the hottest beats on the blockchain pond! With a thumpin’ bass and a love for NFTs, this froggy DJ is hopping into the metaverse party scene.",
+      "image": "/images/memes/chubby-frog.jpg",
+      "techStack": ["Adobe Photoshop"],
+      "link": "https://example.com/dj-chubby-frog"
+    },
+    {
+      "title": "Pixel Duck",
+      "tag": "NFT",
+      "description": "Pixel Duck waddles through the 8-bit Web3 world, quacking up a storm! This retro duck is on a mission to restore the HoDling spirit. Join its pixelated adventure!",
+      "image": "/images/memes/duckin.jpg",
+      "techStack": ["Adobe Photoshop"],
+      "link": "https://example.com/pixel-duck"
+    },
+    {
+      "title": "Gucci Banana",
+      "tag": "NFT",
+      "description": "Gucci Banana is the ripest fashionista in the crypto jungle! Rocking luxury vibes, this banana is peeling its way into high-end collections. Go bananas with style!",
+      "image": "/images/memes/gucci-banana.jpg",
+      "techStack": ["Adobe Photoshop"],
+      "link": "https://example.com/gucci-banana"
+    },
+    {
+      "title": "Lazy Green Alien",
+      "tag": "Meme Token",
+      "description": "Lazy Green Alien landed on the blockchain and decided to chill! This extraterrestrial slacker loves staking tokens and napping; beam up some cosmic vibes with it!",
+      "image": "/images/memes/lazy-alien.jpg",
+      "techStack": ["GIMP", "Adobe Photoshop"],
+      "link": "https://example.com/lazy-green-alien"
+    },
+    {
+      "title": "Lost Paw the Cat",
+      "tag": "Meme Token",
+      "description": "Lost Paw the Cat is a curious kitty wandering the Web3 streets! Help this fluffy feline find its way home by trading its token, every paw counts in this adventure!",
+      "image": "/images/memes/lostpaw.jpg",
+      "techStack": ["Canva", "Adobe Photoshop"],
+      "link": "https://example.com/lost-paw-the-cat"
+    },
+    {
+      "title": "Pixel Pup",
+      "tag": "NFT",
+      "description": "Pixel Pup barks in 8-bit glory, fetching digital bones on the blockchain! This adorable pup is ready to play in the metaverse, adopt its NFT and join the pack!",
+      "image": "/images/memes/pixelated_dog.jpg",
+      "techStack": ["Adobe Photoshop"],
+      "link": "https://example.com/pixel-pup"
+    },
+    {
+      "title": "ETH Potato",
+      "tag": "Meme Token",
+      "description": "ETH Potato is a starchy star staking its way through Ethereum! This spud’s got big dreams of becoming a DeFi king... Dig into its crypto harvest!",
+      "image": "/images/memes/potato.jpeg",
+      "techStack": ["Adobe Photoshop", "Canva"],
+      "link": "https://example.com/eth-potato"
+    },
+    {
+      "title": "Raccoon Rogue",
+      "tag": "NFT",
+      "description": "Raccoon Rogue is the sneakiest bandit in Web3, rummaging through NFT trash for treasures! Join this mischievous critter on a heist for rare digital loot!",
+      "image": "/images/memes/raccoon.jpg",
+      "techStack": ["Canva"],
+      "link": "https://example.com/raccoon-rogue"
+    },
+    {
+      "title": "Smug Shiba",
+      "tag": "Meme Token",
+      "description": "Smug Shiba knows it’s the coolest doge on the blockchain! With a smirk and a swagger, this Shiba is ready to moon your favorite meme token",
+      "image": "/images/memes/smug.webp",
+      "techStack": ["Adobe Photoshop"],
+      "link": "https://example.com/smug-shiba"
+    },
+    {
+      "title": "Wizard Hamster",
+      "tag": "NFT",
+      "description": "Wizard Hamster casts spells on the blockchain with a flick of its tiny wand! This magical rodent is brewing NFT potions, step into its enchanting Web3 world!",
+      "image": "/images/memes/wizard-hamster.jpg",
+      "techStack": ["GIMP", "Adobe Photoshop"],
+      "link": "https://example.com/wizard-hamster"
+    }
+  ]
+}

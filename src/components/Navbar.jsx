@@ -1,0 +1,194 @@
+import { useState, useEffect } from "react";
+import { Box, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
+
+const Navbar = ({ sectionRefs }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [isReady, setIsReady] = useState(false); // Track when sections are ready
+
+  const navLinks = [
+    { name: "Home", ref: sectionRefs.home, id: "home" },
+    { name: "What We Do", ref: sectionRefs.services, id: "services" },
+    { name: "Our Work", ref: sectionRefs.projects, id: "projects" },
+    { name: "Who we are", ref: sectionRefs.about, id: "about" },
+    { name: "Clients", ref: sectionRefs.testimonials, id: "testimonials" },
+  ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsReady(true);
+    }, 1000); // Adjust delay as needed
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handle scroll for glassmorphism effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // IntersectionObserver to detect active section
+  useEffect(() => {
+    if (!isReady) return; // Wait until components are ready
+    const observerOptions = {
+      root: null,
+      rootMargin: "-100px 0px", // Adjust for navbar height
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute("data-section");
+          setActiveSection(sectionId);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Observe each section only if sectionRefs is populated
+    if (Object.keys(sectionRefs).length > 0) {
+      Object.keys(sectionRefs).forEach((key) => {
+        if (sectionRefs[key]?.current) {
+          observer.observe(sectionRefs[key].current);
+        }
+      });
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [sectionRefs]); // Dependency on sectionRefs
+
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsOpen(false);
+  };
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-slate-900/80 backdrop-blur-md shadow-lg"
+          : "bg-slate-800"
+      } text-white px-6 py-4 sm:px-10 sm:py-5 flex justify-between items-center`}>
+      {/* Logo Section */}
+      <div className='flex items-center gap-3'>
+        <Box
+          size={36}
+          className='text-purple-300 transition-transform hover:cursor-pointer hover:rotate-14 duration-300'
+        />
+        <span className='text-xl sm:text-2xl hover:rotate-2 hover:cursor-pointer duration-300 text-gray-300 font-extrabold tracking-tight'>
+          Quba <span className='text-purple-300'>Agency</span>
+        </span>
+      </div>
+
+      {/* Desktop Navigation */}
+      <div className='hidden lg:flex items-center gap-8'>
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href='#'
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(link.ref);
+            }}
+            className={`text-sm font-medium tracking-widest transition-all duration-300 group relative ${
+              activeSection === link.id ? "text-purple-300" : "text-gray-300"
+            }`}>
+            {link.name}
+            <span
+              className={`absolute left-0 bottom-0 h-0.5 bg-purple-300 transition-all duration-300 ${
+                activeSection === link.id ? "w-full" : "w-0 group-hover:w-full"
+              }`}
+            />
+          </a>
+        ))}
+      </div>
+
+      {/* Desktop Button */}
+      <div className='hidden lg:block'>
+        <Button
+          className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold tracking-wide'
+          onClick={() => scrollToSection(sectionRefs.contact)}>
+          Get in Touch
+        </Button>
+      </div>
+
+      {/* Mobile Hamburger Menu */}
+      <div className='lg:hidden flex items-center gap-4'>
+        <Button
+          variant='outline'
+          className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white sm:hidden text-sm'
+          size='sm'
+          onClick={() => scrollToSection(sectionRefs.contact)}>
+          Get in Touch
+        </Button>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <Button
+              variant='ghost'
+              size='icon'
+              className='text-cyan-400 hover:bg-cyan-900/50'
+              aria-label='Toggle menu'>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </SheetTrigger>
+          <SheetContent
+            side='right'
+            className='bg-slate-900/80 backdrop-blur-md pl-6 text-white border-l border-cyan-500/50 w-72'>
+            <div className='flex flex-col gap-8 mt-12'>
+              <SheetTitle className='text-lg font-semibold text-gray-200 mb-4'>
+                Menu
+              </SheetTitle>
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href='#'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.ref);
+                  }}
+                  className={`text-lg font-semibold uppercase transition-transform duration-300 hover:translate-x-2 ${
+                    activeSection === link.id
+                      ? "text-cyan-400"
+                      : "text-gray-200 hover:text-cyan-400"
+                  }`}>
+                  {link.name}
+                </a>
+              ))}
+              <Button
+                variant='outline'
+                className='border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white mt-6 hidden sm:block'
+                onClick={() => {
+                  scrollToSection(sectionRefs.contact);
+                  setIsOpen(false);
+                }}>
+                Get in Touch
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
