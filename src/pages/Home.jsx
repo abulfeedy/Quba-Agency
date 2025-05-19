@@ -7,6 +7,7 @@ const TestimonialSection = lazy(() =>
 );
 const WhatWeDoSection = lazy(() => import("@/components/WhatWeDoSection"));
 const FooterSection = lazy(() => import("@/components/Footer"));
+import Cube from "/cube.svg"
 
 const Home = ({ onSectionRefs }) => {
   const heroRef = useRef(null);
@@ -28,7 +29,9 @@ const Home = ({ onSectionRefs }) => {
 
   return (
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={
+    <div className="flex items-center justify-center h-screen bg-slate-800">
+      <img src={Cube} alt="Loading..." className="w-12 h-12 animate-spin">
         <div ref={heroRef} data-section='home'>
           <HeroSection />
         </div>
