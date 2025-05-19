@@ -30,8 +30,11 @@ const Home = ({ onSectionRefs }) => {
   return (
     <main>
       <Suspense fallback={
-    <div className="flex items-center justify-center h-screen bg-slate-800">
-      <img src={Cube} alt="Loading..." className="w-12 h-12 animate-spin">
+  <div className="flex items-center justify-center h-screen bg-slate-800">
+      <img src={Cube} alt="Loading..." className="w-12 h-12 animate-spin" />
+    </div>
+  }
+> 
         <div ref={heroRef} data-section='home'>
           <HeroSection />
         </div>
