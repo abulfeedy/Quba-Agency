@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 const Home = lazy(() => import("@/pages/Home"));
+const NotFound = lazy(() => import("@/pages/Notfound"));
 
 const App = () => {
   const [sectionRefs, setSectionRefs] = useState({});
@@ -27,6 +28,9 @@ const App = () => {
               path='/'
               element={<Home onSectionRefs={handleSectionRefs} />}
             />
+            <Route
+              path="*" 
+              element={<NotFound />} />
           </Routes>
         </motion.main>
       </Suspense>
