@@ -101,9 +101,7 @@ const WhatWeDoSection = () => {
             What We Do
           </h2>
           <p className='text-gray-300 text-center text-base'>
-            We empower Web3 projects with strategic solutions, blending tech and
-            creativity to deliver results, dominating the blockchain space. From
-            memecoins to community growth, we’ve got you covered.
+            We power up Web3 projects with smart, creative solutions, from seamless user experiences to community-driven platforms. It’s all about merging tech and creativity to make an impact. That’s what we do
           </p>
         </motion.div>
 
