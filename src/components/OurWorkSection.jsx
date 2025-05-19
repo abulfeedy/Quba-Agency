@@ -115,8 +115,7 @@ const OurWorkSection = () => {
           <p className='text-gray-400 text-sm sm:text-base leading-6'>
             We are a proven top Web3 agency, with an impressive track record of
             building solutions in the space. Here are a few of our recent
-            projects that showcase our expertise in building Web3 solutions,
-            from memecoin websites to viral memes.
+            projects that showcase our expertise in building Web3 solutions, from engaging websites to viral memes. 
           </p>
         </div>
       </motion.div>
