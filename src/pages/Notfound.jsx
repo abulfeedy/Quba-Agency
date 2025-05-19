@@ -5,7 +5,7 @@ const PageNotFound = () => {
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-700 text-purple-300"> 
       <img src="/cube.svg" alt="Cube Icon" className="w-16 h-16 mb-4 animate-spin" /> 
       <h1 className="text-2xl sm:text-3xl font-semibold">
-        <span className="text-white">Page</span> Not Found</h1> 
+        Page <span className="text-white">Not Found</span></h1> 
     </div> 
   ); 
 };
