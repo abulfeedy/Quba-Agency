@@ -3,7 +3,7 @@ import { lazy, Suspense, useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-const Home = import lazy(() => import("@/pages/Home"));
+const Home = lazy(() => import("@/pages/Home"));
 
 const App = () => {
   const [sectionRefs, setSectionRefs] = useState({});
