@@ -32,7 +32,7 @@
       "tag": "Web3",
       "image": "/images/blockexplorer.png",
       "techStack": ["React", "Vite", "Tailwind", "Web3.js", "Api"],
-      "link": "https://blockchain-explorer-lite.example.com"
+      "link": "https://blockchainexplorer-lite.vercel.app/"
     },
     {
       "title": "Quba Launch",
