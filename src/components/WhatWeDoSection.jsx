@@ -31,7 +31,7 @@ const WhatWeDoSection = () => {
     },
     {
       icon: <Frame size={40} className='text-purple-300' />,
-      title: "Web3 Tools & Integrations",
+      title: "Web3 Tools & Smart Contract",
       description:
         "Take your platform further with tools that make it easy for users to connect, trade, and engage without the tech headaches.",
     },
@@ -88,7 +88,7 @@ const WhatWeDoSection = () => {
   };
 
   return (
-    <section className='relative text-white py-16 sm:py-20 overflow-hidden px-4 sm:px-6 lg:px-8'>
+    <section className='relative text-white py-20 overflow-hidden px-4 sm:px-6 lg:px-8'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Headline and Description */}
         <motion.div
