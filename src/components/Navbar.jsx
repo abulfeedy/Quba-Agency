@@ -136,6 +136,7 @@ const Navbar = ({ sectionRefs }) => {
       {/* Mobile Hamburger Menu */}
       <div className='lg:hidden flex items-center gap-4'>
         <Button
+          onClick={() => window.location.href = "mailto:qubaweb3@agency.com?subject=Let’s Work Together"}
           className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white sm:hidden text-sm'
           size='sm'
           >
