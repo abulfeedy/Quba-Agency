@@ -30,7 +30,7 @@ const Home = ({ onSectionRefs }) => {
   return (
     <main>
       <Suspense fallback={
-  <div className="fixed inset-0 flex items-center justify-center bg-slate-800 z-50">
+  <div className="fixed inset-0 flex items-center justify-center bg-slate-800">
       <img src={Cube} alt="Loading..." className="w-12 h-12 animate-spin" />
     </div>
   }
