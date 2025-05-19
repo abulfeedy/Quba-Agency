@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Mail } from 'lucide-react';
 import {
   TbBrandTelegram,
   TbBrandFacebook,
@@ -36,11 +37,11 @@ const FooterSection = () => {
   ];
 
   const navLinks = [
-    { name: "Home", url: "/" },
-    { name: "About", url: "/about" },
-    { name: "Services", url: "/services" },
-    { name: "Projects", url: "/projects" },
-    { name: "Contact", url: "/contact" },
+    { name: "Home" },
+    { name: "What We Do" },
+    { name: "Our Work" },
+    { name: "Who we are" },
+    { name: "Clients" }, 
   ];
 
   return (
@@ -75,7 +76,7 @@ const FooterSection = () => {
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <motion.a
-                    href={link.url}
+                    href="#" 
                     className='text-gray-300 hover:text-purple-400 text-sm'
                     variants={linkHoverVariants}>
                     {link.name}
@@ -125,9 +126,10 @@ const FooterSection = () => {
             </div>
             <Button
               variant='default'
+              onClick={() => window.location.href = "mailto:contact@qubaagency.com?subject=Let’s Work Together"}
               className='bg-purple-300 hover:bg-purple-400 text-gray-800 font-semibold py-2 px-4 rounded-md transition-all duration-300'
               asChild>
-              <a href='/contact'>Get in Touch</a>
+              <a href='/contact'><Mail /> Get in Touch</a>
             </Button>
           </motion.div>
         </div>
