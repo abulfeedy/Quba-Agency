@@ -146,7 +146,7 @@ const Navbar = ({ sectionRefs }) => {
             <Button
               variant='ghost'
               size='icon'
-              className='text-cyan-400 hover:bg-cyan-900/50'
+              className='text-purple-300 hover:bg-purple-400/50'
               aria-label='Toggle menu'>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -168,15 +168,15 @@ const Navbar = ({ sectionRefs }) => {
                   }}
                   className={`text-lg font-semibold uppercase transition-transform duration-300 hover:translate-x-2 ${
                     activeSection === link.id
-                      ? "text-cyan-400"
-                      : "text-gray-200 hover:text-cyan-400"
+                      ? "text-purple-300"
+                      : "text-gray-200 hover:text-purple-400"
                   }`}>
                   {link.name}
                 </a>
               ))}
               <Button
                 variant='outline'
-                className='border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white mt-6 hidden sm:block'
+                className='border-purple-400 text-purple-300 hover:bg-purple-500 hover:text-white mt-6 hidden sm:block'
                 onClick={() => {
                   scrollToSection(sectionRefs.contact);
                   setIsOpen(false);
