@@ -15,19 +15,12 @@ const Navbar = ({ sectionRefs }) => {
   const [isReady, setIsReady] = useState(false); // Track when sections are ready
 
   const navLinks = [
-    { name: "Home", ref: sectionRefs.home, id: "home" },
-    { name: "What We Do", ref: sectionRefs.services, id: "services" },
-    { name: "Our Work", ref: sectionRefs.projects, id: "projects" },
-    { name: "Who we are", ref: sectionRefs.about, id: "about" },
-    { name: "Clients", ref: sectionRefs.testimonials, id: "testimonials" },
+    { name: "Home", id: "home" },
+    { name: "What We Do", id: "services" },
+    { name: "Our Work", id: "projects" },
+    { name: "Who we are", id: "about" },
+    { name: "Clients", id: "testimonials" },
   ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsReady(true);
-    }, 1000); // Adjust delay as needed
-    return () => clearTimeout(timer);
-  }, []);
 
   // Handle scroll for glassmorphism effect
   useEffect(() => {
@@ -38,48 +31,37 @@ const Navbar = ({ sectionRefs }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // IntersectionObserver to detect active section
+// IntersectionObserver
   useEffect(() => {
-    if (!isReady) return; // Wait until components are ready
-    const observerOptions = {
-      root: null,
-      rootMargin: "-100px 0px", // Adjust for navbar height
-      threshold: 0,
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.getAttribute("data-section");
-          setActiveSection(sectionId);
-        }
-      });
-    };
-
     const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute("data-section");
+            setActiveSection(sectionId);
+          }
+        });
+      },
+      { threshold: 0.5 }
     );
 
-    // Observe each section only if sectionRefs is populated
-    if (Object.keys(sectionRefs).length > 0) {
-      Object.keys(sectionRefs).forEach((key) => {
-        if (sectionRefs[key]?.current) {
-          observer.observe(sectionRefs[key].current);
-        }
-      });
-    }
+    Object.values(sectionRefs).forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
 
     return () => {
-      observer.disconnect();
+      Object.values(sectionRefs).forEach((ref) => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
     };
-  }, [sectionRefs]); // Dependency on sectionRefs
+  }, [sectionRefs]);
 
-  const scrollToSection = (ref) => {
+  // Scroll Function
+  const scrollToSection = (id) => {
+    const ref = sectionRefs[id];
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setIsOpen(false);
   };
 
   return (
@@ -109,11 +91,10 @@ const Navbar = ({ sectionRefs }) => {
       <div className='hidden lg:flex items-center gap-8'>
         {navLinks.map((link) => (
           <a
-            key={link.name}
+            key={link.id}
             href='#'
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection(link.ref);
+            onClick={() => {      
+              scrollToSection(link.id);
             }}
             className={`text-sm font-medium tracking-widest transition-all duration-300 group relative ${
               activeSection === link.id ? "text-purple-300" : "text-gray-300"
