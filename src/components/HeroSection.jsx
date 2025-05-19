@@ -101,8 +101,7 @@ const HeroSection = () => {
             variants={textVariants}>
             <Gem size={20} className='flex-shrink-0 text-purple-200' />
             <p className='text-sm sm:text-base max-w-xs sm:max-w-sm'>
-              We craft sleek & modern Web3 solutions, from memecoin websites to
-              Telegram bots and viral memes powering projects worldwide.
+              We craft sleek & modern Web3 solutions, from dynamic websites to custom Telegram bots and viral memes that drive projects forward
             </p>
           </motion.div>
 
