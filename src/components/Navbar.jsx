@@ -90,7 +90,12 @@ const Navbar = ({ sectionRefs }) => {
           : "bg-slate-800"
       } text-white px-6 py-4 sm:px-10 sm:py-5 flex justify-between items-center`}>
       {/* Logo Section */}
-      <div className='flex items-center gap-3'>
+      <div
+        onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(sectionRefs.home);
+            }}
+        className='flex items-center gap-3'>
         <Box
           size={36}
           className='text-purple-300 transition-transform hover:cursor-pointer hover:rotate-14 duration-300'
