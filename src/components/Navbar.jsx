@@ -153,7 +153,7 @@ const Navbar = ({ sectionRefs }) => {
           </SheetTrigger>
           <SheetContent
             side='right'
-            className='bg-slate-900/80 backdrop-blur-md pl-6 text-white border-l border-purple-400/50 w-72'>
+            className='bg-slate-900/80 backdrop-blur-md pl-6 text-white w-72'>
             <div className='flex flex-col gap-8 mt-12'>
               <SheetTitle className='text-lg font-semibold text-gray-200 mb-4'>
                 Menu
