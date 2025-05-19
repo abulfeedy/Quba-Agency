@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Menu, X } from "lucide-react";
+import { Box, Menu, X, Mail} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -126,9 +126,10 @@ const Navbar = ({ sectionRefs }) => {
       {/* Desktop Button */}
       <div className='hidden lg:block'>
         <Button
+          onClick={() => window.location.href = "mailto:qubaweb3@agency.com?subject=Let’s Work Together"}
           className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold tracking-wide'
-          onClick={() => scrollToSection(sectionRefs.contact)}>
-          Get in Touch
+          >
+          <Mail /> Get in Touch
         </Button>
       </div>
 
@@ -137,8 +138,8 @@ const Navbar = ({ sectionRefs }) => {
         <Button
           className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white sm:hidden text-sm'
           size='sm'
-          onClick={() => scrollToSection(sectionRefs.contact)}>
-          Get in Touch
+          >
+          <Mail /> Get in Touch
         </Button>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
