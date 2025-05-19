@@ -10,20 +10,15 @@ const FooterSection = lazy(() => import("@/components/Footer"));
 import Cube from "/cube.svg"
 
 const Home = ({ onSectionRefs }) => {
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const servicesRef = useRef(null);
-  const projectsRef = useRef(null);
-  const testimonialsRef = useRef(null);
+  const sectionRefs = {
+    home: useRef(null),
+    services: useRef(null),
+    projects: useRef(null),
+    about: useRef(null),
+    testimonials: useRef(null),
+  };
 
   useEffect(() => {
-    const sectionRefs = {
-      home: heroRef,
-      about: aboutRef,
-      services: servicesRef,
-      projects: projectsRef,
-      testimonials: testimonialsRef,
-    };
     onSectionRefs(sectionRefs);
   }, [onSectionRefs]);
 
@@ -35,19 +30,19 @@ const Home = ({ onSectionRefs }) => {
     </div>
   }
 > 
-        <div ref={heroRef} data-section='home'>
+        <div ref={sectionRefs.home } data-section='home'>
           <HeroSection />
         </div>
-        <div ref={servicesRef} data-section='services'>
+        <div ref={sectionRefs.services} data-section='services'>
           <WhatWeDoSection />
         </div>
-        <div ref={projectsRef} data-section='projects'>
+        <div ref={sectionRefs.projects} data-section='projects'>
           <OurWorkSection />
         </div>
-        <div ref={aboutRef} data-section='about'>
+        <div ref={sectionRefs.about} data-section='about'>
           <AboutUsSection />
         </div>
-        <div ref={testimonialsRef} data-section='testimonials'>
+        <div ref={sectionRefs.testimonials} data-section='testimonials'>
           <TestimonialSection />
         </div>
         <FooterSection />
