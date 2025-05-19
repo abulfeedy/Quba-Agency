@@ -31,7 +31,15 @@ const Navbar = ({ sectionRefs }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-// IntersectionObserver
+// Scroll Function
+  const scrollToSection = (id) => {
+    const ref = sectionRefs[id];
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  // IntersectionObserver
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,7 +50,7 @@ const Navbar = ({ sectionRefs }) => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.6 }
     );
 
     Object.values(sectionRefs).forEach((ref) => {
@@ -55,14 +63,6 @@ const Navbar = ({ sectionRefs }) => {
       });
     };
   }, [sectionRefs]);
-
-  // Scroll Function
-  const scrollToSection = (id) => {
-    const ref = sectionRefs[id];
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <nav
