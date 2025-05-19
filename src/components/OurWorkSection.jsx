@@ -146,7 +146,7 @@ const OurWorkSection = () => {
                       onClick={setSelectedProject}
                     />
                     {selectedProject && (
-                      <DialogContent className='bg-slate-800 text-white border-0 rounded-lg shadow-lg max-w-sm sm:max-w-lg p-6 sm:p-8'>
+                      <DialogContent className='bg-slate-800 text-white border-0 rounded-lg shadow-lg max-w-md sm:max-w-lg p-6 sm:p-8'>
                         <motion.div
                           initial='hidden'
                           animate='visible'
