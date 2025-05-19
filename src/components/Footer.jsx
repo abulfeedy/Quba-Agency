@@ -44,7 +44,7 @@ const FooterSection = () => {
   ];
 
   return (
-    <footer className='relative text-white pt-12 sm:pt-26 overflow-hidden text-sm'>
+    <footer className='relative text-white pt-26 overflow-hidden text-sm'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 px-4 sm:px-6 lg:px-8'>
           {/* Brand Section */}
