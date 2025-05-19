@@ -13,13 +13,13 @@ const TestimonialSection = () => {
     },
     {
       quote:
-        "Their meme marketing? Absolute gold. Our project went from crickets to crazy engagement in days. Highly recommend Quba for any Web3 project!",
-      author: "Laura Ibezim",
-      role: "COO, TradeScape",
+        "Smooth process from start to finish. The backend is rock solid, and the UI is just... chef’s kiss", 
+      author: "Milo Sanders",
+      role: "Product Lead at TokenBridge",
     },
     {
       quote:
-        "We needed a Web3 tool that was simple for users but powerful under the hood – they nailed it.",
+        "We needed a Web3 tool that was simple for users but powerful under the hood – they delivered and nailed it.",
       author: "Alex Brown",
       role: "Product Lead, DeFiClick",
     },
