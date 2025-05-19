@@ -135,7 +135,6 @@ const Navbar = ({ sectionRefs }) => {
       {/* Mobile Hamburger Menu */}
       <div className='lg:hidden flex items-center gap-4'>
         <Button
-          variant='outline'
           className='bg-purple-300 text-gray-800 hover:bg-purple-400 hover:text-white sm:hidden text-sm'
           size='sm'
           onClick={() => scrollToSection(sectionRefs.contact)}>
@@ -153,7 +152,7 @@ const Navbar = ({ sectionRefs }) => {
           </SheetTrigger>
           <SheetContent
             side='right'
-            className='bg-slate-900/80 backdrop-blur-md Pl-6 border-0 text-white w-72'>
+            className='bg-slate-900/80 backdrop-blur-md pl-6 border-0 text-white w-72'>
             <div className='flex flex-col gap-8 mt-12'>
               <SheetTitle className='text-lg font-semibold text-gray-200 mb-4'>
                 Menu
