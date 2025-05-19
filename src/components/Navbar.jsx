@@ -75,7 +75,7 @@ const Navbar = ({ sectionRefs }) => {
       <div
         onClick={(e) => {
               e.preventDefault();
-              scrollToSection(sectionRefs.home);
+              scrollToSection("home");
             }}
         className='flex items-center gap-3'>
         <Box
@@ -147,11 +147,11 @@ const Navbar = ({ sectionRefs }) => {
               </SheetTitle>
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.id}
                   href='#'
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(link.ref);
+                    scrollToSection(link.id);
                   }}
                   className={`text-lg font-semibold uppercase transition-transform duration-300 hover:translate-x-2 ${
                     activeSection === link.id
