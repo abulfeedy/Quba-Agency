@@ -31,7 +31,7 @@ const AboutUsSection = () => {
   };
 
   return (
-    <section className='relative px-4 sm:px-6 lg:px-8 text-white py-16 sm:py-20 overflow-hidden'>
+    <section className='relative px-4 sm:px-6 lg:px-8 text-white py-24 sm:py-20 overflow-hidden'>
       {/* Main Content */}
       <div className='container px-4 sm:px-6 lg:px-8 grid rid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12'>
         {/* Left Column: Text Content */}
