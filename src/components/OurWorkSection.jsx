@@ -97,7 +97,7 @@ const OurWorkSection = () => {
   };
 
   return (
-    <section className='relative bg-gradient-to-br from-slate-900 to-slate-800 px-4 sm:px-6 lg:px-8 text-white py-16 sm:py-20 overflow-hidden'>
+    <section className='relative bg-gradient-to-br from-slate-900 to-slate-800 px-4 sm:px-6 lg:px-8 text-white py-20 overflow-hidden'>
       {/* Headline and Description */}
       <motion.div
         className='mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16'
