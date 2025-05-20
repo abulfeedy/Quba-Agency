@@ -186,7 +186,7 @@ const OurWorkSection = () => {
                               variants={buttonHoverVariants}>
                               <Button
                                 variant='default'
-                                className='bg-purple-300 hover:bg-purple-400 text-gray-900 font-semibold py-2 px-4 rounded-md transition-all duration-300'
+                                className='bg-purple-300 hover:bg-purple-400 hover:text-white text-gray-900 font-semibold py-2 px-4 rounded-md transition-all duration-300'
                                 asChild>
                                 <a
                                   href={selectedProject.link}

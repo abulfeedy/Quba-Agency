@@ -152,11 +152,8 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
                 (window.location.href =
                   "mailto:contact@qubaagency.com?subject=Let’s Work Together")
               }
-              className='bg-purple-300 hover:bg-purple-400 hover:text-white cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded-md transition-all duration-300'
-              asChild>
-              <a href='/contact'>
-                <Mail /> Get in Touch
-              </a>
+              className='bg-purple-300 hover:bg-purple-400 hover:text-white cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded-md transition-all duration-300'>
+              <Mail /> Get in Touch
             </Button>
           </motion.div>
         </div>
