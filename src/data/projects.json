@@ -83,96 +83,84 @@
       "tag": "NFT",
       "description": "Meet Angry Spud, the feistiest tuber in the blockchain patch! This spud’s got a chip on its shoulder and a dream of dominating the DeFi farm. Will you join its starchy rebellion?",
       "image": "/images/memes/angry_potato.jpg",
-      "techStack": ["GIMP", "Canva"],
-      "link": "https://example.com/angry-spud"
+      "techStack": ["GIMP", "Canva"]
     },
     {
       "title": "Dr. Shrimp",
       "tag": "Meme Token",
       "description": "Dr. Shrimp is the ocean’s smartest crustacean, prescribing Web3 wisdom with a pinch of humor. This shrimpy doc is ready to heal FOMO syndrome, dive into its clinic!",
       "image": "/images/memes/dr-shrimp.jpg",
-      "techStack": ["GIMP"],
-      "link": "https://example.com/dr-shrimp"
+      "techStack": ["GIMP"]
     },
     {
       "title": "DJ Chubby Frog",
       "tag": "NFT",
       "description": "DJ Chubby Frog spins the hottest beats on the blockchain pond! With a thumpin’ bass and a love for NFTs, this froggy DJ is hopping into the metaverse party scene.",
       "image": "/images/memes/chubby-frog.jpg",
-      "techStack": ["Adobe Photoshop"],
-      "link": "https://example.com/dj-chubby-frog"
+      "techStack": ["Adobe Photoshop"]
     },
     {
       "title": "Pixel Duck",
       "tag": "NFT",
       "description": "Pixel Duck waddles through the 8-bit Web3 world, quacking up a storm! This retro duck is on a mission to restore the HoDling spirit. Join its pixelated adventure!",
       "image": "/images/memes/duckin.jpg",
-      "techStack": ["Adobe Photoshop"],
-      "link": "https://example.com/pixel-duck"
+      "techStack": ["Adobe Photoshop"]
     },
     {
       "title": "Gucci Banana",
       "tag": "NFT",
       "description": "Gucci Banana is the ripest fashionista in the crypto jungle! Rocking luxury vibes, this banana is peeling its way into high-end collections. Go bananas with style!",
       "image": "/images/memes/gucci-banana.jpg",
-      "techStack": ["Adobe Photoshop"],
-      "link": "https://example.com/gucci-banana"
+      "techStack": ["Adobe Photoshop"]
     },
     {
       "title": "Lazy Green Alien",
       "tag": "Meme Token",
       "description": "Lazy Green Alien landed on the blockchain and decided to chill! This extraterrestrial slacker loves staking tokens and napping; beam up some cosmic vibes with it!",
       "image": "/images/memes/lazy-alien.jpg",
-      "techStack": ["GIMP", "Adobe Photoshop"],
-      "link": "https://example.com/lazy-green-alien"
+      "techStack": ["GIMP", "Adobe Photoshop"]
     },
     {
       "title": "Lost Paw the Cat",
       "tag": "Meme Token",
       "description": "Lost Paw the Cat is a curious kitty wandering the Web3 streets! Help this fluffy feline find its way home by trading its token, every paw counts in this adventure!",
       "image": "/images/memes/lostpaw.jpg",
-      "techStack": ["Canva", "Adobe Photoshop"],
-      "link": "https://example.com/lost-paw-the-cat"
+      "techStack": ["Canva", "Adobe Photoshop"]
     },
     {
       "title": "Pixel Pup",
       "tag": "NFT",
       "description": "Pixel Pup barks in 8-bit glory, fetching digital bones on the blockchain! This adorable pup is ready to play in the metaverse, adopt its NFT and join the pack!",
       "image": "/images/memes/pixelated_dog.jpg",
-      "techStack": ["Adobe Photoshop"],
-      "link": "https://example.com/pixel-pup"
+      "techStack": ["Adobe Photoshop"]
     },
     {
       "title": "ETH Potato",
       "tag": "Meme Token",
       "description": "ETH Potato is a starchy star staking its way through Ethereum! This spud’s got big dreams of becoming a DeFi king... Dig into its crypto harvest!",
       "image": "/images/memes/potato.jpeg",
-      "techStack": ["Adobe Photoshop", "Canva"],
-      "link": "https://example.com/eth-potato"
+      "techStack": ["Adobe Photoshop", "Canva"]
     },
     {
       "title": "Raccoon Rogue",
       "tag": "NFT",
       "description": "Raccoon Rogue is the sneakiest bandit in Web3, rummaging through NFT trash for treasures! Join this mischievous critter on a heist for rare digital loot!",
       "image": "/images/memes/raccoon.jpg",
-      "techStack": ["Canva"],
-      "link": "https://example.com/raccoon-rogue"
+      "techStack": ["Canva"]
     },
     {
       "title": "Smug Shiba",
       "tag": "Meme Token",
       "description": "Smug Shiba knows it’s the coolest doge on the blockchain! With a smirk and a swagger, this Shiba is ready to moon your favorite meme token",
       "image": "/images/memes/smug.webp",
-      "techStack": ["Adobe Photoshop"],
-      "link": "https://example.com/smug-shiba"
+      "techStack": ["Adobe Photoshop"]
     },
     {
       "title": "Wizard Hamster",
       "tag": "NFT",
       "description": "Wizard Hamster casts spells on the blockchain with a flick of its tiny wand! This magical rodent is brewing NFT potions, step into its enchanting Web3 world!",
       "image": "/images/memes/wizard-hamster.jpg",
-      "techStack": ["GIMP", "Adobe Photoshop"],
-      "link": "https://example.com/wizard-hamster"
+      "techStack": ["GIMP", "Adobe Photoshop"]
     }
   ]
 }

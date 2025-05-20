@@ -14,8 +14,8 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   const stats = [
     { value: "6+", label: "Years of Experience" },
-    { value: "250+", label: "Team members" },
-    { value: "50+", label: "Completed Projects" },
+    { value: "25+", label: "Team members" },
+    { value: "20+", label: "Completed Projects" },
   ];
 
   // Framer Motion Variants
@@ -92,7 +92,7 @@ const HeroSection = () => {
           <motion.div variants={textVariants}>
             <Button
               variant='default'
-              className='bg-purple-300 hover:bg-purple-500 hover:text-white text-gray-800 font-semibold py-2 px-6 rounded-md transition-all duration-300'>
+              className='bg-purple-300 cursor-pointer hover:bg-purple-400 hover:text-white text-gray-800 font-semibold py-2 px-6 rounded-md transition-all duration-300'>
               Hire Us
             </Button>
           </motion.div>
@@ -101,7 +101,8 @@ const HeroSection = () => {
             variants={textVariants}>
             <Gem size={20} className='flex-shrink-0 text-purple-200' />
             <p className='text-sm sm:text-base max-w-xs sm:max-w-sm'>
-              We craft sleek & modern Web3 solutions, from dynamic websites to custom Telegram bots and viral memes that drive projects forward
+              We craft sleek & modern Web3 solutions, from dynamic websites to
+              custom Telegram bots and viral memes that drive projects forward
             </p>
           </motion.div>
 
@@ -124,7 +125,7 @@ const HeroSection = () => {
                 whileHover={{
                   scale: 1.2,
                   transition: { duration: 0.3, ease: "easeOut" },
-                  color: "purple",
+                  color: "#d9a3dc",
                 }}
                 variants={iconVariants}>
                 <Link

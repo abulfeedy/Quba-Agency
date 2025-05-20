@@ -101,7 +101,10 @@ const WhatWeDoSection = () => {
             What We Do
           </h2>
           <p className='text-gray-300 text-center text-base'>
-            We power up Web3 projects with smart, creative solutions, from seamless user experiences to community-driven platforms. It’s all about merging tech and creativity to make an impact. That’s what we do
+            We power up Web3 projects with smart, creative solutions, from
+            seamless user experiences to community-driven platforms. It’s all
+            about merging tech and creativity to make an impact. That’s what we
+            do
           </p>
         </motion.div>
 

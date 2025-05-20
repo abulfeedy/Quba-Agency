@@ -115,7 +115,8 @@ const OurWorkSection = () => {
           <p className='text-gray-400 text-sm sm:text-base leading-6'>
             We are a proven top Web3 agency, with an impressive track record of
             building solutions in the space. Here are a few of our recent
-            projects that showcase our expertise in building Web3 solutions, from engaging websites to viral memes. 
+            projects that showcase our expertise in building Web3 solutions,
+            from engaging websites to viral memes.
           </p>
         </div>
       </motion.div>
@@ -159,12 +160,12 @@ const OurWorkSection = () => {
                               <Badge className='bg-purple-300 text-gray-800 text-xs uppercase tracking-wider mb-2'>
                                 {selectedProject.tag}
                               </Badge>
-                              <span className='mt-2 block'>
+                              <span className='mt-3 block'>
                                 {selectedProject.description}
                               </span>
                             </DialogDescription>
                           </DialogHeader>
-                          <div className='mt-4'>
+                          <div className='my-6'>
                             <h4 className='font-semibold mb-2'>Tech Stack</h4>
                             <ul className='flex flex-wrap gap-2'>
                               {selectedProject.techStack.map(
@@ -180,12 +181,12 @@ const OurWorkSection = () => {
                           </div>
                           {selectedProject.link && (
                             <motion.div
-                              className='mt-6 flex'
+                              className='mt-5 inline-block'
                               whileHover='hover'
                               variants={buttonHoverVariants}>
                               <Button
                                 variant='default'
-                                className='bg-purple-300 ml-auto hover:bg-purple-400 text-gray-900 font-semibold inline-block py-2 px-4 rounded-md transition-all duration-300'
+                                className='bg-purple-300 hover:bg-purple-400 text-gray-900 font-semibold py-2 px-4 rounded-md transition-all duration-300'
                                 asChild>
                                 <a
                                   href={selectedProject.link}
