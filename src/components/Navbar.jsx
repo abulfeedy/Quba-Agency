@@ -56,7 +56,7 @@ const Navbar = ({ sectionRefs }) => {
     const observerOptions = {
       root: null,
       rootMargin: "-100px 0px",
-      threshold: 0.6, // Slightly more forgiving
+      threshold: 0,
     };
 
     const observerCallback = (entries) => {
