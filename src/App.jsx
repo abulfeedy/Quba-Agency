@@ -1,23 +1,27 @@
 import { lazy, Suspense, useCallback, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-const Home = lazy(() => import("@/pages/Home"));
-const NotFound = lazy(() => import("@/pages/Notfound"));
+import Home from "@/pages/Home";
+import NotFound from "@/pages/Notfound";
 
 const App = () => {
   const [sectionRefs, setSectionRefs] = useState({});
+  const location = useLocation();
 
-  // Memoize the callback to prevent re-creation on every render
   const handleSectionRefs = useCallback((refs) => {
     setSectionRefs(refs);
   }, []);
 
+  // Reset sectionRefs on route change
+  useEffect(() => {
+    setSectionRefs({});
+  }, [location.pathname]);
+  
   return (
     <div className='bg-gray-800 min-h-screen flex flex-col font-inter'>
       <Navbar sectionRefs={sectionRefs} />
-      <Suspense>
         <motion.main
           className='flex-grow container mt-5 sm:mt-0 mx-auto py-12'
           initial={{ opacity: 0 }}
@@ -33,7 +37,6 @@ const App = () => {
               element={<NotFound />} />
           </Routes>
         </motion.main>
-      </Suspense>
       
     </div>
   );
