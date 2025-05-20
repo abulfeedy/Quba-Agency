@@ -114,7 +114,7 @@ const Navbar = ({ sectionRefs }) => {
       <div
         onClick={(e) => {
               e.preventDefault();
-              scrollToSection("home");
+              scrollToSection(sectionRefs.home);
             }}
         className='flex items-center gap-3'>
         <Box
