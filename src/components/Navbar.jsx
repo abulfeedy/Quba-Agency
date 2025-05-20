@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Box, Menu, X, Mail} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,13 +15,26 @@ const Navbar = ({ sectionRefs }) => {
   const [activeSection, setActiveSection] = useState("home");
   const [isReady, setIsReady] = useState(false); // Track when sections are ready
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "What We Do", id: "services" },
-    { name: "Our Work", id: "projects" },
-    { name: "Who we are", id: "about" },
-    { name: "Clients", id: "testimonials" },
+    { name: "Home", ref: sectionRefs.home, id: "home" },
+    { name: "What We Do", ref: sectionRefs.services, id: "services" },
+    { name: "Our Work", ref: sectionRefs.projects, id: "projects" },
+    { name: "Who we are", ref: sectionRefs.about, id: "about" },
+    { name: "Clients", ref: sectionRefs.testimonials, id: "testimonials" },
   ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const allReady = Object.values(sectionRefs).every((ref) => ref?.current);
+      if (allReady) {
+        setIsReady(true);
+      }
+    }, 500); // Reduced timeout for quicker interaction
+    return () => clearTimeout(timer);
+  }, [sectionRefs]);
 
   // Handle scroll for glassmorphism effect
   useEffect(() => {
@@ -31,39 +45,64 @@ const Navbar = ({ sectionRefs }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-// Scroll Function
-  const scrollToSection = (id) => {
-    const ref = sectionRefs[id];
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  // IntersectionObserver
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.getAttribute("data-section");
+    if (!isReady) return;
+
+    const allReady = Object.values(sectionRefs).every(
+      (ref) => ref?.current !== null
+    );
+    if (!allReady) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-100px 0px",
+      threshold: 0.6, // Slightly more forgiving
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute("data-section");
+          if (sectionId) {
             setActiveSection(sectionId);
           }
-        });
-      },
-      { threshold: 0.6 }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
     );
 
     Object.values(sectionRefs).forEach((ref) => {
-      if (ref.current) observer.observe(ref.current);
+      if (ref?.current) {
+        observer.observe(ref.current);
+      }
     });
 
     return () => {
-      Object.values(sectionRefs).forEach((ref) => {
-        if (ref.current) observer.unobserve(ref.current);
-      });
+      observer.disconnect();
     };
-  }, [sectionRefs]);
+  }, [sectionRefs, isReady]);
 
+  const scrollToSection = (ref) => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      // Delay to allow navigation before scroll
+      setTimeout(() => {
+        if (ref && ref.current) {
+          ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); // Small delay to let page mount
+    } else {
+      if (ref && ref.current) {
+        ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    setIsOpen(false);
+  };
+  
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -92,9 +131,10 @@ const Navbar = ({ sectionRefs }) => {
         {navLinks.map((link) => (
           <a
             key={link.id}
-            href='#'
-            onClick={() => {      
-              scrollToSection(link.id);
+            href='/'
+            onClick={() => { 
+              e.preventDefault();
+              scrollToSection(link.ref);
             }}
             className={`text-sm font-medium tracking-widest transition-all duration-300 group relative ${
               activeSection === link.id ? "text-purple-300" : "text-gray-300"
@@ -148,10 +188,10 @@ const Navbar = ({ sectionRefs }) => {
               {navLinks.map((link) => (
                 <a
                   key={link.id}
-                  href='#'
+                  href='/'
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(link.id);
+                    scrollToSection(link.ref);
                   }}
                   className={`text-lg font-semibold uppercase transition-transform duration-300 hover:translate-x-2 ${
                     activeSection === link.id
