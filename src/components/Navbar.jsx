@@ -131,7 +131,7 @@ const Navbar = ({ sectionRefs }) => {
         {navLinks.map((link) => (
           <a
             key={link.id}
-            href='/'
+            href='#'
             onClick={() => { 
               e.preventDefault();
               scrollToSection(link.ref);
@@ -188,7 +188,7 @@ const Navbar = ({ sectionRefs }) => {
               {navLinks.map((link) => (
                 <a
                   key={link.id}
-                  href='/'
+                  href='#'
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(link.ref);
