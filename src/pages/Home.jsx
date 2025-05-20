@@ -1,56 +1,69 @@
-import { useEffect, useRef, Suspense, lazy } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 const HeroSection = lazy(() => import("@/components/HeroSection"));
 const AboutUsSection = lazy(() => import("@/components/AboutUsSection"));
 const OurWorkSection = lazy(() => import("@/components/OurWorkSection"));
-const TestimonialSection = lazy(() =>
-  import("@/components/TestimonialSection")
-);
+const TestimonialSection = lazy(() => import("@/components/TestimonialSection"));
 const WhatWeDoSection = lazy(() => import("@/components/WhatWeDoSection"));
 const FooterSection = lazy(() => import("@/components/Footer"));
-import Cube from "/cube.svg"
+import Cube from "/cube.svg";
 
 const Home = ({ onSectionRefs }) => {
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const servicesRef = useRef(null);
-  const projectsRef = useRef(null);
-  const testimonialsRef = useRef(null);
+  const sectionRefs = {
+    home: useRef(null),
+    services: useRef(null),
+    projects: useRef(null),
+    about: useRef(null),
+    testimonials: useRef(null),
+  };
+
+  const [loadedSections, setLoadedSections] = useState({
+    home: false,
+    services: false,
+    projects: false,
+    about: false,
+    testimonials: false,
+    footer: false,
+  });
+
+  const allSectionsLoaded = Object.values(loadedSections).every(Boolean);
 
   useEffect(() => {
-    const sectionRefs = {
-      home: heroRef,
-      about: aboutRef,
-      services: servicesRef,
-      projects: projectsRef,
-      testimonials: testimonialsRef,
-    };
-    onSectionRefs(sectionRefs);
-  }, [onSectionRefs]);
+    onSectionRefs({ ...sectionRefs, allSectionsLoaded });
+  }, [onSectionRefs, allSectionsLoaded]);
+
+  const handleSectionLoad = (section) => {
+    setLoadedSections((prev) => ({ ...prev, [section]: true }));
+  };
 
   return (
     <main>
-      <Suspense fallback={
-        <div className="fixed inset-0 flex items-center justify-center bg-slate-800">
-            <img src={Cube} alt="Loading..." className="w-12 h-12 animate-spin" />
+      <Suspense
+        fallback={
+          <div className="fixed inset-0 flex items-center justify-center bg-slate-800">
+            <img
+              src={Cube}
+              alt="Loading..."
+              className="w-12 h-12 animate-spin"
+            />
           </div>
         }
-      > 
-        <div ref={heroRef} data-section='home'>
-          <HeroSection />
-        </div>
-        <div ref={servicesRef} data-section='services'>
-          <WhatWeDoSection />
-        </div>
-        <div ref={projectsRef} data-section='projects'>
-          <OurWorkSection />
-        </div>
-        <div ref={aboutRef} data-section='about'>
-          <AboutUsSection />
-        </div>
-        <div ref={testimonialsRef} data-section='testimonials'>
-          <TestimonialSection />
-        </div>
-        <FooterSection />
+      >
+        <section ref={sectionRefs.home} data-section="home">
+          <HeroSection onLoad={() => handleSectionLoad("home")} />
+        </section>
+        <section ref={sectionRefs.services} data-section="services">
+          <WhatWeDoSection onLoad={() => handleSectionLoad("services")} />
+        </section>
+        <section ref={sectionRefs.projects} data-section="projects">
+          <OurWorkSection onLoad={() => handleSectionLoad("projects")} />
+        </section>
+        <section ref={sectionRefs.about} data-section="about">
+          <AboutUsSection onLoad={() => handleSectionLoad("about")} />
+        </section>
+        <section ref={sectionRefs.testimonials} data-section="testimonials">
+          <TestimonialSection onLoad={() => handleSectionLoad("testimonials")} />
+        </section>
+        <FooterSection onLoad={() => handleSectionLoad("footer")} />
       </Suspense>
     </main>
   );
