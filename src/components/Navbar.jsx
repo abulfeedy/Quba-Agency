@@ -19,6 +19,12 @@ const Navbar = ({ sectionRefs }) => {
   const location = useLocation();
 
   const navLinks = [
+   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [isReady, setIsReady] = useState(false); // Track when sections are ready
+
+  const navLinks = [
     { name: "Home", ref: sectionRefs.home, id: "home" },
     { name: "What We Do", ref: sectionRefs.services, id: "services" },
     { name: "Our Work", ref: sectionRefs.projects, id: "projects" },
@@ -28,13 +34,10 @@ const Navbar = ({ sectionRefs }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const allReady = Object.values(sectionRefs).every((ref) => ref?.current);
-      if (allReady) {
-        setIsReady(true);
-      }
-    }, 500); // Reduced timeout for quicker interaction
+      setIsReady(true);
+    }, 1000); // Adjust delay as needed
     return () => clearTimeout(timer);
-  }, [sectionRefs]);
+  }, []);
 
   // Handle scroll for glassmorphism effect
   useEffect(() => {
@@ -45,17 +48,12 @@ const Navbar = ({ sectionRefs }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // IntersectionObserver to detect active section
   useEffect(() => {
-    if (!isReady) return;
-
-    const allReady = Object.values(sectionRefs).every(
-      (ref) => ref?.current !== null
-    );
-    if (!allReady) return;
-
+    if (!isReady) return; // Wait until components are ready
     const observerOptions = {
       root: null,
-      rootMargin: "-100px 0px",
+      rootMargin: "-100px 0px", // Adjust for navbar height
       threshold: 0,
     };
 
@@ -63,9 +61,7 @@ const Navbar = ({ sectionRefs }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.getAttribute("data-section");
-          if (sectionId) {
-            setActiveSection(sectionId);
-          }
+          setActiveSection(sectionId);
         }
       });
     };
@@ -75,12 +71,26 @@ const Navbar = ({ sectionRefs }) => {
       observerOptions
     );
 
-    Object.values(sectionRefs).forEach((ref) => {
-      if (ref?.current) {
-        observer.observe(ref.current);
-      }
-    });
+    // Observe each section only if sectionRefs is populated
+    if (Object.keys(sectionRefs).length > 0) {
+      Object.keys(sectionRefs).forEach((key) => {
+        if (sectionRefs[key]?.current) {
+          observer.observe(sectionRefs[key].current);
+        }
+      });
+    }
 
+    return () => {
+      observer.disconnect();
+    };
+  }, [sectionRefs]); // Dependency on sectionRefs
+
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsOpen(false);
+  };
     return () => {
       observer.disconnect();
     };
