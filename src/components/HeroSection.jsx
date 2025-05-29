@@ -111,7 +111,7 @@ const HeroSection = () => {
             variants={textVariants}>
             <span className='text-white text-sm sm:text-base'>Follow us</span>
             {[
-              { Icon: TbBrandTelegram, link: "#" },
+              { Icon: TbBrandTelegram, link: "https://t.me/qubagency" },
               { Icon: BsTwitterX, link: "#" },
               { Icon: TbBrandFacebook, link: "#" },
               { Icon: TbBrandDiscord, link: "#" },
