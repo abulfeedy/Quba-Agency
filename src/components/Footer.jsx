@@ -44,7 +44,7 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
   };
 
   const socialLinks = [
-    { name: "Telegram", Icon: TbBrandTelegram, link: "#" },
+    { name: "Telegram", Icon: TbBrandTelegram, link: "t.me/qubagency" },
     { name: "Twitter", Icon: BsTwitterX, link: "#" },
     { name: "Facebook", Icon: TbBrandFacebook, link: "#" },
     { name: "Discord", Icon: TbBrandDiscord, link: "#" },
