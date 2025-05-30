@@ -1,12 +1,20 @@
 {
   "recent": [
     {
+      "title": "Blockchain Explorer Lite",
+      "description": "Blockchain Explorer Lite is your go-to Web3 tool for diving into the pulse of blockchain addresses with style and swagger! We bring culture, fun, and flair to wallet analytics, turning raw data into vibrant insights. Whether you’re a crypto kingpin or a small-time hustler, our platform celebrates your journey with metrics that vibe with your roots.",
+      "tag": "Web3 Tool",
+      "image": "/images/blockexplorer.png",
+      "techStack": ["React", "Vite", "Tailwind", "Web3.js", "API", "Ethers.js"],
+      "link": "https://www.blockchainexplorerlite.xyz/"
+    },
+    {
       "title": "PepeMoon",
       "description": "A high-octane memecoin platform with raw degen energy, featuring a fair launch, locked liquidity, and real-time charts for moon-chasers.",
       "tag": "Meme",
       "image": "/images/pepemoon.webp",
       "techStack": ["React", "Vite", "Tailwind"],
-      "link": "https://pepemoon-iota.vercel.app/"
+      "link": "https://pepemoon.qubaweb3.agency/"
     },
     {
       "title": "Quba Launch",
@@ -14,33 +22,17 @@
       "tag": "Launchpad",
       "image": "/images/qubalaunch.webp",
       "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
-      "link": "https://qubalaunch.vercel.app/"
-    },
-    {
-      "title": "MetaVerse Fest 2025",
-      "description": "A revolutionary Web3 event platform with NFT tickets, hackathons, and immersive metaverse vibes, built for the future of festivals.",
-      "tag": "Event",
-      "image": "/images/metafest.webp",
-      "techStack": ["React", "Framer Motion", "Web3.js", "Wagmi"],
-      "link": "https://metafest.vercel.app/"
+      "link": "https://presale.qubaweb3.agency/"
     }
   ],
   "website": [
     {
-      "title": "Blockchain Explorer Lite",
-      "description": "A vibrant Web3 tool for users to track wallet transactions across BTC, BNB, SOL, ETH, and USDT, with a bold traditional vibe.",
-      "tag": "Web3",
-      "image": "/images/blockexplorer.png",
-      "techStack": ["React", "Vite", "Tailwind", "Web3.js", "Api"],
-      "link": "https://blockchainexplorer-lite.vercel.app/"
-    },
-    {
       "title": "Quba Launch",
       "description": "A decentralized launchpad for Web3 dreamers, enabling token creation, presale investments, and memecoin tracking with a sleek flair.",
       "tag": "Launchpad",
       "image": "/images/qubalaunch.webp",
       "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
-      "link": "https://qubalaunch.vercel.app/"
+      "link": "https://presale.qubaweb3.agency/"
     },
     {
       "title": "AstraNet",
@@ -48,7 +40,7 @@
       "tag": "Utility",
       "image": "/images/astra.png",
       "techStack": ["React", "Vite", "Tailwind", "Wagmi"],
-      "link": "https://astranet-pi.vercel.app/"
+      "link": "https://astranet.qubaweb3.agency/"
     },
     {
       "title": "MetaVerse Fest 2025",
@@ -56,7 +48,7 @@
       "tag": "Event",
       "image": "/images/metafest.webp",
       "techStack": ["React", "Framer Motion", "Web3.js", "Wagmi"],
-      "link": "https://metafest.vercel.app/"
+      "link": "https://metafest.qubaweb3.agency/"
     },
     {
       "title": "PepeMoon",
@@ -64,7 +56,7 @@
       "tag": "Meme",
       "image": "/images/pepemoon.webp",
       "techStack": ["React", "Vite", "Tailwind"],
-      "link": "https://pepemoon-iota.vercel.app/"
+      "link": "https://pepemoon.qubaweb3.agency/"
     },
     {
       "title": "Nostalgic Solana ($NOST)",
@@ -72,7 +64,7 @@
       "tag": "Meme",
       "image": "/images/nost.webp",
       "techStack": ["HTML", "CSS", "Vanilla JS"],
-      "link": "https://nostcoin.vercel.app/"
+      "link": "https://nostcoin.qubaweb3.agency/"
     }
   ],
   "bots": [],
