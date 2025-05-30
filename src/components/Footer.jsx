@@ -44,7 +44,7 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
   };
 
   const socialLinks = [
-    { name: "Telegram", Icon: TbBrandTelegram, link: "t.me/qubagency" },
+    { name: "Telegram", Icon: TbBrandTelegram, link: "https://t.me/qubagency" },
     { name: "Twitter", Icon: BsTwitterX, link: "#" },
     { name: "Facebook", Icon: TbBrandFacebook, link: "#" },
     { name: "Discord", Icon: TbBrandDiscord, link: "#" },
@@ -118,7 +118,7 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
             variants={sectionVariants}>
             <h4 className='font-semibold mb-4'>For Partnership</h4>
             <ul className='space-y-2 text-gray-400 text-sm sm:text-base'>
-              <li>Email: contact@qubagency.com</li>
+              <li>Email: partners@qubaweb3.agency</li>
             </ul>
           </motion.div>
 
@@ -135,7 +135,7 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  href={social.url}
+                  href={social.link}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-gray-400 hover:text-purple-500'
@@ -150,7 +150,7 @@ const FooterSection = ({ footerSectionRefs, setTargetSection }) => {
               variant='default'
               onClick={() =>
                 (window.location.href =
-                  "mailto:contact@qubaagency.com?subject=Let’s Work Together")
+                  "mailto:contact@qubaweb3.agency?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
               }
               className='bg-purple-300 hover:bg-purple-400 hover:text-white cursor-pointer text-gray-800 font-semibold py-2 px-4 rounded-md transition-all duration-300'>
               <Mail /> Get in Touch
