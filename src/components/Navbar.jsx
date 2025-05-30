@@ -141,7 +141,7 @@ const Navbar = ({ sectionRefs, setTargetSection }) => {
           <Button
             onClick={() =>
               (window.location.href =
-                "mailto:contact@qubagency.com?subject=Let’s Work Together")
+                "mailto:contact@qubagency.com?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
             }
             className='bg-purple-300 text-gray-800 hover:bg-purple-400 cursor-pointer hover:text-white transition-all duration-300 font-semibold tracking-wide'
             aria-label='Send us an email to get in touch'>
@@ -154,7 +154,7 @@ const Navbar = ({ sectionRefs, setTargetSection }) => {
           <Button
             onClick={() =>
               (window.location.href =
-                "mailto:contact@qubagency.com?subject=Let’s Work Together")
+                "mailto:contact@qubaweb3.agency?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
             }
             className='bg-purple-300 text-gray-800 cursor-pointer hover:bg-purple-400 hover:text-white sm:hidden text-sm'
             size='sm'
@@ -206,7 +206,7 @@ const Navbar = ({ sectionRefs, setTargetSection }) => {
                 className='border-purple-400 text-purple-400 hover:bg-purple-500 hover:text-white mt-6 hidden sm:flex mr-5'
                 onClick={() =>
                   (window.location.href =
-                    "mailto:qubaweb3@agency.com?subject=Let’s Work Together")
+                    "mailto:contact@qubaweb3.agency?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
                 }
                 aria-label='Send us an email to get in touch'>
                 <Mail /> Get in Touch
