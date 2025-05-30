@@ -141,7 +141,7 @@ const Navbar = ({ sectionRefs, setTargetSection }) => {
           <Button
             onClick={() =>
               (window.location.href =
-                "mailto:contact@qubagency.com?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
+                "mailto:contact@qubaweb3.agency?subject=General%20Inquiry&body=Hi%20there%2C%0A%0AI%20wanted%20to%20reach%20out%20regarding%20...%0A%0ARegards%2C%0A[Your%20Name]")
             }
             className='bg-purple-300 text-gray-800 hover:bg-purple-400 cursor-pointer hover:text-white transition-all duration-300 font-semibold tracking-wide'
             aria-label='Send us an email to get in touch'>
