@@ -6,7 +6,7 @@
       "tag": "Web3 Tool",
       "image": "/images/blockexplorer.png",
       "techStack": ["React", "Vite", "Tailwind", "Web3.js", "API", "Ethers.js"],
-      "link": "https://www.blockchainexplorerlite.xyz/"
+      "link": "https://flexlite.qubaagency.com/"
     },
     {
       "title": "PepeMoon",
@@ -14,7 +14,7 @@
       "tag": "Meme",
       "image": "/images/pepemoon.webp",
       "techStack": ["React", "Vite", "Tailwind"],
-      "link": "https://pepemoon.qubaweb3.agency/"
+      "link": "https://pepenoon.qubaagency.com/"
     },
     {
       "title": "Quba Launch",
@@ -22,7 +22,7 @@
       "tag": "Launchpad",
       "image": "/images/qubalaunch.webp",
       "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
-      "link": "https://presale.qubaweb3.agency/"
+      "link": "https://qubalaunch.qubaagency.com"
     }
   ],
   "website": [
@@ -32,7 +32,15 @@
       "tag": "Launchpad",
       "image": "/images/qubalaunch.webp",
       "techStack": ["React", "Vite", "Tailwind", "SaaS", "Ethers.js"],
-      "link": "https://presale.qubaweb3.agency/"
+      "link": "https://qubalaunch.qubaagency.com"
+    },
+    {
+      "title": "Blockchain Explorer Lite",
+      "description": "Blockchain Explorer Lite is your go-to Web3 tool for diving into the pulse of blockchain addresses with style and swagger! We bring culture, fun, and flair to wallet analytics, turning raw data into vibrant insights. Whether you’re a crypto kingpin or a small-time hustler, our platform celebrates your journey with metrics that vibe with your roots.",
+      "tag": "Web3 Tool",
+      "image": "/images/blockexplorer.png",
+      "techStack": ["React", "Vite", "Tailwind", "Web3.js", "API", "Ethers.js"],
+      "link": "https://flexlite.qubaagency.com/"
     },
     {
       "title": "AstraNet",
@@ -40,7 +48,7 @@
       "tag": "Utility",
       "image": "/images/astra.png",
       "techStack": ["React", "Vite", "Tailwind", "Wagmi"],
-      "link": "https://astranet.qubaweb3.agency/"
+      "link": "https://astranet.qubaagency.com/"
     },
     {
       "title": "MetaVerse Fest 2025",
@@ -48,7 +56,7 @@
       "tag": "Event",
       "image": "/images/metafest.webp",
       "techStack": ["React", "Framer Motion", "Web3.js", "Wagmi"],
-      "link": "https://metafest.qubaweb3.agency/"
+      "link": "https://metafest.qubaagency.com/"
     },
     {
       "title": "PepeMoon",
@@ -56,7 +64,7 @@
       "tag": "Meme",
       "image": "/images/pepemoon.webp",
       "techStack": ["React", "Vite", "Tailwind"],
-      "link": "https://pepemoon.qubaweb3.agency/"
+      "link": "https://pepenoon.qubaagency.com/"
     },
     {
       "title": "Nostalgic Solana ($NOST)",
@@ -64,7 +72,7 @@
       "tag": "Meme",
       "image": "/images/nost.webp",
       "techStack": ["HTML", "CSS", "Vanilla JS"],
-      "link": "https://nostcoin.qubaweb3.agency/"
+      "link": "https://nost.qubaagency.com/"
     }
   ],
   "bots": [],
