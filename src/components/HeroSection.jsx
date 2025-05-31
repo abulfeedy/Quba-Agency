@@ -93,7 +93,7 @@ const HeroSection = () => {
             <Button
               onClick={() =>
               (window.location.href =
-                "mailto:hire@qubaweb3.agency?subject=Project Inquiry - Website or Dapp&body=Hi QubaWeb3 Team,%0D%0A%0D%0AI’m interested in hiring your team for a project.%0D%0AHere are a few details:%0D%0A- Type of project: (e.g., website, dApp, smart contract)%0D%0A- Timeline:%0D%0A- Budget range:%0D%0A- Additional notes:%0D%0A%0D%0AThanks!")
+                "mailto:hire@qubaagency.com?subject=Project Inquiry - Website or Dapp&body=Hi QubaWeb3 Team,%0D%0A%0D%0AI’m interested in hiring your team for a project.%0D%0AHere are a few details:%0D%0A- Type of project: (e.g., website, dApp, smart contract)%0D%0A- Timeline:%0D%0A- Budget range:%0D%0A- Additional notes:%0D%0A%0D%0AThanks!")
               }
               variant='default'
               className='bg-purple-300 cursor-pointer hover:bg-purple-400 hover:text-white text-gray-800 font-semibold py-2 px-6 rounded-md transition-all duration-300'>
